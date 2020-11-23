@@ -109,16 +109,16 @@ function loadDataFromURL() {
     if (name == "" && career == "" && location == "") {
         getJob().then(list => {
 
-            document.getElementById("bodyJobs").innerHTML = formatArray(temp).join("");
-            document.getElementById("countJobs").innerHTML = `Tìm thấy ${temp.length} việc làm đang tuyển dụng`;
+            document.getElementById("bodyJobs").innerHTML = formatArray(list).join("");
+            document.getElementById("countJobs").innerHTML = `Tìm thấy ${list.length} việc làm đang tuyển dụng`;
         })
         return;
     }
     if (location != "" && career != "" && name != "") {
         jobSearchByAll(career, location, name).then(list => {
 
-            document.getElementById("bodyJobs").innerHTML = formatArray(temp).join("");
-            document.getElementById("countJobs").innerHTML = `Tìm thấy ${temp.length} việc làm đang tuyển dụng`;
+            document.getElementById("bodyJobs").innerHTML = formatArray(list).join("");
+            document.getElementById("countJobs").innerHTML = `Tìm thấy ${list.length} việc làm đang tuyển dụng`;
         })
         return;
     }
@@ -139,8 +139,8 @@ function loadDataFromURL() {
     if (location == "" && career == "") {
         jobSearchByName(name).then(list => {
 
-            document.getElementById("bodyJobs").innerHTML = formatArray(temp).join("");
-            document.getElementById("countJobs").innerHTML = `Tìm thấy ${temp.length} việc làm đang tuyển dụng`;
+            document.getElementById("bodyJobs").innerHTML = formatArray(list).join("");
+            document.getElementById("countJobs").innerHTML = `Tìm thấy ${list.length} việc làm đang tuyển dụng`;
         })
         return;
     }
@@ -154,16 +154,16 @@ function loadDataFromURL() {
     if (career == "") {
         jobSearchByNameloca(name, location).then(list => {
 
-            document.getElementById("bodyJobs").innerHTML = formatArray(temp).join("");
-            document.getElementById("countJobs").innerHTML = `Tìm thấy ${temp.length} việc làm đang tuyển dụng`;
+            document.getElementById("bodyJobs").innerHTML = formatArray(list).join("");
+            document.getElementById("countJobs").innerHTML = `Tìm thấy ${list.length} việc làm đang tuyển dụng`;
         })
         return;
     }
     if (location == "") {
         jobSearchByNamecar(name, career).then(list => {
 
-            document.getElementById("bodyJobs").innerHTML = formatArray(temp).join("");
-            document.getElementById("countJobs").innerHTML = `Tìm thấy ${temp.length} việc làm đang tuyển dụng`;
+            document.getElementById("bodyJobs").innerHTML = formatArray(list).join("");
+            document.getElementById("countJobs").innerHTML = `Tìm thấy ${list.length} việc làm đang tuyển dụng`;
         })
         return;
     }
